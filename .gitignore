@@ -1,0 +1,53 @@
+# Build directories
+build/
+**/build/
+**/Debug/
+**/Release/
+dist/
+bin/
+lib/
+
+# Compiled objects and binaries
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+
+# Debugger and symbol files
+*.pdb
+*.dSYM/
+*.su
+
+# Logs
+*.log
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+.cache/
+
+# IDEs (keep VS Code settings, ignore JetBrains)
+.idea/
+
+# Temporary files
+*.tmp
+
+# C_Cpp_Runner artifacts
+outDebug
+**/outDebug
