@@ -2,36 +2,39 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "C/C++: g++ build active file",
+            "label": "Compile C++ (g++)",
             "type": "shell",
-            "command": "/usr/bin/g++",
+            "command": "g++",
             "args": [
-                "-Wall",
-                "-Wextra",
-                "-Wpedantic",
-                "-Wshadow",
-                "-Wformat=2",
-                "-Wcast-align",
-                "-Wconversion",
-                "-Wsign-conversion",
-                "-Wnull-dereference",
-                "-g3",
-                "-O0",
                 "${file}",
                 "-o",
-                "${fileDirname}/build/Debug/outDebug"
+                "${fileDirname}/${fileBasenameNoExtension}.out",
+                "-std=c++17",
+                "-g"
             ],
-            "options": {
-                "cwd": "${fileDirname}"
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
             },
-            "problemMatcher": [
-                "$gcc"
+            "problemMatcher": []
+        },
+        {
+            "label": "Run C++ Program",
+            "type": "shell",
+            "command": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "dependsOn": [
+                "Compile C++ (g++)"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Compiler: /usr/bin/g++"
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
         }
     ]
 }
