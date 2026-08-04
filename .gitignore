@@ -51,6 +51,7 @@ Thumbs.db
 
 # Temporary files
 *.tmp
+.env
 
 # C_Cpp_Runner artifacts
 outDebug
